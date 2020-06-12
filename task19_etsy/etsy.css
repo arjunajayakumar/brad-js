@@ -1,0 +1,56 @@
+body {
+  margin: 0px;
+}
+
+/* .main-navigation {
+  display: flex;
+  background-color: green;
+  align-items: center;
+  /* padding: 10px 10px; */
+  margin-left: 5%;
+  margin-right: 5%;
+} */
+
+
+/* .logo {
+  width: 5%;
+  margin-right: 3%;
+  background-color: hotpink;
+} */
+
+/* .search-bar input {
+  background-color: brown;
+   width: 50rem;
+   padding: 6px;
+   font-size: 16px;
+  background-color: tomato;
+} */
+
+/* .search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eee;
+  width: 62%;
+  background:crimson ;
+  padding: 10px 12px;
+  border-radius: 25px;
+} */
+
+.signin-bskt {
+  display: flex;
+}
+
+/* .signin {
+  margin-left: 3%;
+  margin-right: 2%;
+  outline: none;
+} */
+
+/* .basket {
+  margin-right: 2%;
+}
+
+.basket img {
+  width: 10%;
+  
+} */

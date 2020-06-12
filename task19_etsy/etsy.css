@@ -1,56 +1,190 @@
 body {
   margin: 0px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* .main-navigation {
-  display: flex;
-  background-color: green;
-  align-items: center;
-  /* padding: 10px 10px; */
-  margin-left: 5%;
-  margin-right: 5%;
-} */
+header {
+  border-bottom: 1px solid #eeee ;
+}
 
-
-/* .logo {
-  width: 5%;
-  margin-right: 3%;
-  background-color: hotpink;
-} */
-
-/* .search-bar input {
-  background-color: brown;
-   width: 50rem;
-   padding: 6px;
-   font-size: 16px;
-  background-color: tomato;
-} */
-
-/* .search-box {
+.main-navigation {
   display: flex;
   align-items: center;
+  padding: 10px 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.logo {
+  margin-right: 2%;
+}
+
+.logo img {
+ width: 100%;
+}
+
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
   border: 1px solid #eee;
-  width: 62%;
-  background:crimson ;
-  padding: 10px 12px;
+  width: 70%;
+  align-items: center;
   border-radius: 25px;
-} */
+  justify-content: center;
+  padding: 7px 5px;
+  margin-right: 2%;
+  background-color: #eee;
+}
+
+.search-bar {
+  width: 90%; 
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 7px;
+  background-color: #eee;
+  border: none;
+  font-size: 16px;
+}
+
+.search-btn {
+  border: none;
+}
+
+.material-icons {
+  padding:2px;
+  font-size: 1rem;
+  
+}
 
 .signin-bskt {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .signin {
-  margin-left: 3%;
-  margin-right: 2%;
-  outline: none;
-} */
+.sign-in {
+  padding: 8px 15px;
+  width: 100%;
+}
 
-/* .basket {
-  margin-right: 2%;
+.signin-btn {
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.basket {
+  margin-left: 10%;
+  width: 60%;
 }
 
 .basket img {
-  width: 10%;
-  
-} */
+  width: 15%;
+}
+
+.first-navigation {
+  display: flex;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-around;
+}
+
+.first-navigation a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+}
+
+main {
+  margin: 2px 60px;
+}
+
+.box1 {
+  display: flex;
+   justify-content: center;
+}
+
+.box-shop_now {
+  background-color: #c3e0d0;
+  font-size: 30px;
+  height: 297px;
+  width: 15%;
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dog-image {
+  height: 295px;
+  width: 35%;
+}
+
+.dog-image img {
+  height: 290px;
+  width: 100%;
+}
+
+.mask-box {
+  margin-left: 1%;
+  text-align: end;
+}
+
+.mask {
+  background-color: #fff;
+  height: 200px;
+  width: 100%;
+}
+
+.mask img {
+  height: 200px;
+  width: 45%;
+}
+
+.text-box {
+  position: absolute;
+  top: 20%;
+  left: 57%;
+  width: 20%;
+  height:193px;
+  text-align: start;
+  font-size: 35px;
+}
+
+/* Common class for arrow svg */
+
+.shopnow-arrow img {
+  width: 3%;
+}
+
+.shop-now a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+}
+
+.support {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c3e0d0;
+  height: 80px;
+  margin-top: 2%;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+

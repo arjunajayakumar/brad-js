@@ -146,8 +146,8 @@ console.log(val)
 
 ### 18 Functons
 doubt
-1.function declaration and expression
-2.annonymus functions
+function declaration and expression
+annonymus functions
 
 ###### Immediately invokkable function expressions
 * A function which is declared and called at same time

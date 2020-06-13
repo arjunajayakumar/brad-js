@@ -2,12 +2,11 @@
 
 1. Diff between function declaration and expression
 
-  declaration
-    ``` 
-    function test = () {
-    }
-    ```
-   expression
+ declaration
+   
+    `function test = () { }`
+   
+ expression
    
     `const test = function () { }`
  

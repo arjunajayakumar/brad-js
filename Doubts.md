@@ -1,2 +1,2 @@
-Difference between heap and stack
-Diff between function declaration and expression annonymus functions. This looks similar
+1. Difference between heap and stack
+2. Diff between function declaration and expression annonymus functions. This looks similar

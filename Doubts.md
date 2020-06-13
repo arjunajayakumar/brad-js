@@ -8,10 +8,8 @@
     }
     ```
    expression
-    
-    ```
-    const test = function () {
-    }
-    ```
+   
+    `const test = function () { }`
+ 
 2. annonymus functions - use case of anonymus function
   

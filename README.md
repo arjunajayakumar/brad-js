@@ -26,61 +26,55 @@ console.timeEnd('hello');
 
 ### 07 Vaiables - var, let const
 
-value reassignment is possible for var and let.
-const - the vlaue assigned for const will not change. ie reassignment is possible.
-alo we cannot initialize const without having a value(undefined)
-vaiable can have letters,numbers, _, and $ but variable should not start with number
-conventional method of naming is to use camel casing 
-eg:firstName
-------------------------------------------------------------------------------------------
-008 data types
-mainly two types are there primitive and reference
+* value reassignment is possible for var and let.
+* const - the vlaue assigned for const will not change. ie reassignment is possible.
+*  we cannot initialize const without having a value(undefined)
+* vaiable can have `letters`,`numbers`, `_`, and `$` but variable should not start with number
+* conventional method of naming is to use camel casing 
+  eg:firstName
 
-doubt
-primite and reference data type
-heap and stack 
+### 08 data types
+* Mainly two types are there primitive and reference
 
-primitive data type
+###### primitive data type
+* stored directly in the location the variable accesses
+* stored on the stack
 
-stored directly in the location the variable accesses
-stored on the stack
+###### Reference data type
+* Accessed by reference
+* objects that are stored on the heap
+* A pointer to a location in the memmory        
 
-reference data type
-accessed by reference
+###### primitive data type examples
+ * string - letters, numbers symbols etc...
+ * number - integer, decimels,float etc..
+ * boolean - true or false
+ * null - emplty value
+ * undefined - a variable that have't assinged a value
+ * symbols(ES6)
 
-objects that are stored on the heap
-A pointer to a location in the memmory        
+###### Reference data type examples
+ * arrays
+ * object iterals
+ * functions
+ * dates
+ * anything else
 
-primitive data types
-string - letters, numbers symbols etc...
-number - integer, decimels,float etc..
-boolean - true or false
-null - emplty value
-undefined - a variable that have't assinged a value
-symbols(ES6)
-
-reference data types
-arrays
-object iterals
-functions
-dates
-anything else
-
-------------------------------
-009Type conversion
-number to string
-number can be converted to string by using String()
+### 09 Type conversion
+* number to string
+* number can be converted to string by using String()
+```
 let val = String(5);
 console.log(val)
+```
+  * typeof
+  * tofixed
+  * parserInt
+  * parseFloat
+  * Number()
+  * String()
 
-typeof
-tofixed
-parserInt
-parseFloat
-Number()
-String()
-
-### 10Numbers The Math Object
+### 10 Numbers The Math Object
 ```
   Math.PI();      - return the value of PI
   Math.E ();
@@ -154,9 +148,10 @@ String()
 doubt
 1.function declaration and expression
 2.annonymus functions
---------------------------------------------
-1. Immediately invokkable function expressions
-A function which is declared and called at same time
-2. Property Methods
+
+###### Immediately invokkable function expressions
+* A function which is declared and called at same time
+
+###### Property Methods
 
 * When a Function put inside an object, it is called a method

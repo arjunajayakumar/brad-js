@@ -3,7 +3,7 @@ class Github {
         this.client_id = '160d44ef945495d9c2bc';
         this.client_secret = '7a13ea54b32c54e8a1dcbe5575b4bbdd06e7263';
         this.repos_count = 5;
-        this.repos_sort = 'created: asc';   
+        this.repos_sort = 'created: asc';
     }
 
     async getUser(user) {
@@ -19,4 +19,5 @@ class Github {
             repos
         }
     }
-} 
+}
+

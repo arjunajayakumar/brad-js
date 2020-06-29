@@ -7,14 +7,14 @@ class Storage {
     }
 
     getLocationData() {
-        if(localStorage.getItem('city') === null) {
+        if (localStorage.getItem('city') === null) {
             this.city = this.defaultCity;
         } else {
             this.city = localStorage.getItem('city');
 
         }
 
-        if(localStorage.getItem('state') === null) {
+        if (localStorage.getItem('state') === null) {
             this.state = this.defaultState;
         } else {
             this.state = localStorage.getItem('state');
@@ -30,3 +30,4 @@ class Storage {
         localStorage.setItem('state', state);
     }
 }
+

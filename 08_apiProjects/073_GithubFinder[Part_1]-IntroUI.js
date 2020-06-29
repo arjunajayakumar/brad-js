@@ -10,3 +10,4 @@ serachUser.addEventListener('keyup', (e) => {
         console.log(userText);
     }
 })
+

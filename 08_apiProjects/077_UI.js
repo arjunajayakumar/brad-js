@@ -33,7 +33,7 @@ class UI {
 
     // Show repos
     showRepos(repos) {
-        let output = ''; 
+        let output = '';
 
         repos.forEach(function (repo) {
             output += `
@@ -92,3 +92,4 @@ class UI {
         this.profile.innerHTML = '';
     }
 }
+

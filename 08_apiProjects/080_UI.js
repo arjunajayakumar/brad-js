@@ -21,3 +21,4 @@ class UI {
         this.wind.textContent = `Wind: ${weather.wind.deg}`;
     }
 }
+

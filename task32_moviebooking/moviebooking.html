@@ -10,11 +10,11 @@
 <body>
     <div class="movie-container">
         <label for="select">Pick a Movie:</label>
-        <select id="select">
-            <option>Avengers Endgame(₹120)</option>
-            <option>Interstellar(₹100)</option>
-            <option>Joker(₹120)</option>
-            <option>In to the wild(₹120)</option>
+        <select id="select-movie">
+            <option value="120"> Avengers Endgame(₹120)</option>
+            <option value="100"> Interstellar(₹100)</option>
+            <option value="110"> Joker(₹110)</option>
+            <option value="180"> In to the wild(₹180)</option>
         </select>
     </div>
     <ul class="showcase">
@@ -36,35 +36,36 @@
         <div class="row">
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat .occupied"></div>
+            <div class="seat occupied"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat .occupied"></div>
-            <div class="seat"></div>
-        </div>
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat .occupied"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat .occupied"></div>
+            <div class="seat occupied"></div>
             <div class="seat"></div>
         </div>
         <div class="row">
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat .occupied"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
-            <div class="seat .occupied"></div>
+            <div class="seat occupied"></div>
         </div>
     </div>
-    <p>You have selected <span id="count"></span> seats for a price of <span id="amount">0</span></p>
+    <p>You have selected <span id="count"></span> seats for a price of ₹ <span id="amount">0</span></p>
+    <script src="moviebooking.js"></script>
 
 </body>
 

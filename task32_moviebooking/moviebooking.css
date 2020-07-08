@@ -43,7 +43,7 @@ body {
 }
 
 .seat.selected {
-    background-color:tomato ;
+    background-color:rgb(8, 134, 18) ;
 }
 
 .seat.occupied {
@@ -52,7 +52,7 @@ body {
 }
 
 .seat {
-    background-color: rgb(116, 110, 26);
+    background-color: rgb(161, 7, 71);
     height: 12px;
     width: 17px;
     margin: 3px;

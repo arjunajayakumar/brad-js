@@ -86,7 +86,7 @@ input[type="text"], input[type="number"] {
     width: 100%; 
 }
 
-.warning {
+#warning {
     color: #d3230f;
     padding: 5px 0;
     font-weight: 600;

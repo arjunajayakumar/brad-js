@@ -7,13 +7,15 @@ const deletebtn = document.querySelector('.delete-btn');
 const income = document.getElementById('money-plus');
 const expense = document.getElementById('money-minus');
 const balance = document.getElementById('balance');
-const warning = document.querySelector('.warning');
+const warning = document.getElementById('warning');
 
 let totalAmount = 0;
 let expRate = 0;
 //Event Listener
 transaction.addEventListener('click', addHistory);
 list.addEventListener('click', deleteItem);
+document.addEventListener('DOMContentLoaded', getItem); 
+
 
 //add Income
 function addIncome(expAmount) {
@@ -43,7 +45,7 @@ function addHistory(e) {
     expenseAmount = parseInt(amount.value);
 
     if (expenseAmount === '' || expenseName === '') {
-        warning.style.display = 'inline';
+        warning.style.display = 'block';
 
     } else if (expenseAmount < 0) {
         const listEl = document.createElement('li');
@@ -165,7 +167,6 @@ function getItem() {
     })
 }
 
-getItem()
 
 // Remove from LS
 function removeFromLs(intemName) {

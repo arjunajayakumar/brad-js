@@ -149,45 +149,45 @@ doubt
 function declaration and expression
 annonymus functions
 
-###### Immediately invokkable function expressions
+##### Immediately invokkable function expressions
 * A function which is declared and called at same time
 
-###### Property Methods
+##### Property Methods
 
 * When a Function put inside an object, it is called a method
 
-###### WINDOW METHODS / OBJECTS / PROPERTIES
+### WINDOW METHODS / OBJECTS / PROPERTIES
 
-* Alert
+#### Alert
 alert('Hello world');
 
-* Propmt
+#### Propmt
 const input = prompt();
 alert(input);
 
-* Confirm
+#### Confirm
 if (confirm('Are you sure')) {
   console.log('yes');
 } else {
   console.log('no');
 }
 
-* Outer height and width
+#### Outer height and width
 let val;
 val = window.outerHeight;
 val = window.outerWidth;
 console.log(val);
 
-* Inner height and width
+#### Inner height and width
 val = window.innerHeight;
 val = window.innerWidth;
 console.log(val);
 
-* Scroll Points
+#### Scroll Points
 val = window.scrollY;
 val = window.scrollX;
 
-* Location Object
+#### Location Object
 val = window.location;
 val = window.location.hostname;
 val = window.location.port;
@@ -195,20 +195,20 @@ val = window.location.href;
 val = window.location.search;
 console.log(val);
 
-* Redirect
+#### Redirect
 window.location.href = 'http://google.com';
 console.log(val);
 
-* Reload 
+#### Reload 
 window.location.reload();
 console.log(val);
 
-* History Object
+#### History Object
 window.history.go(-2);
 val = window.history.length;
 console.log(val);
 
-* Navigator
+#### Navigator
 val = window.navigator;
 val = window.navigator.appName;
 val = window.navigator.appVersion;
@@ -216,3 +216,37 @@ val = window.navigator.userAgent;
 val = window.navigator.vendor;
 val = window.navigator.language;
 console.log(val);
+
+### SCOPES
+
+#### Global scope
+var a = 1;
+let b = 2;
+const c = 3;
+
+console.log('Global scope:',a ,b, c);
+
+#### Function scope
+function test() {
+  let a = 4;
+  var b = 5;
+  const c = 6;
+  console.log("Function scope: ", a, b, c);
+}
+test();
+
+#### Block scope
+if (true) {
+  let a = 4;
+  var b = 5;
+  const c = 6;
+  console.log('if scope: ', a, b, c);
+}
+
+for (var a = 0; a < 10; a++) {
+  console.log(`Loop: ${a}`);
+}
+
+console.log('Global scope:', a, b, c);
+
+

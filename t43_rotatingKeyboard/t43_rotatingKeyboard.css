@@ -63,5 +63,12 @@ body {
     cursor: pointer;
     font-weight: 600;
     letter-spacing: 2px;
+}
 
+.row1 {
+    background-color: #bdbdbd;
+}
+
+.single {
+    background-color: aliceblue;
 }

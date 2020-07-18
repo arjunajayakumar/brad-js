@@ -29,6 +29,7 @@ body {
 
 .keyholder {
     display: flex;
+    background-color: #bdbdbd;
 }
 
 .keys {
@@ -65,10 +66,19 @@ body {
     letter-spacing: 2px;
 }
 
-.row1 {
-    background-color: #bdbdbd;
+.rowcolor {
+    background-color: #2196f3;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px; 
 }
 
 .single {
-    background-color: aliceblue;
+    border: 1px solid #0277bd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
 }

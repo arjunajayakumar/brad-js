@@ -1,76 +1,66 @@
-const firstRow = document.querySelectorAll(".keys1");
-// const secondRow = document.querySelectorAll(".keys2");
-// const thirdRow = document.querySelectorAll(".keys3");
-// const fourthRow = document.querySelectorAll(".keys4");
-// const fifthRow = document.querySelectorAll(".keys5");
-// const sixthRow = document.querySelectorAll(".keys6");
 const tapBtn = document.getElementById('input');
 const output = document.getElementById('output');
 const classList = document.querySelectorAll('keys');
+const row1 = document.querySelector('.row1');
+const row2 = document.querySelector('.row2');
+const row3 = document.querySelector('.row3');
+const row4 = document.querySelector('.row4');
+const row5 = document.querySelector('.row5');
+const row6 = document.querySelector('.row6');
 
 
 //Event Listeners
-tapBtn.addEventListener('click', selectRow);
-document.body.addEventListener('click', addSingleClass);
+// tapBtn.addEventListener('click', navigation);
+
+let rows = [row1, row2, row3, row4, row5, row6];
+let index = 0;
+
+// let runner;
+// let state  = 'rowNav';
+
+// function navigation() {
+//   if(state === 'rowNav') {
+//       state = 'coloumn';
+//       rowNav();
+//   } else if(state === 'coloumn') {
+//       state = 'rowNav';
+//      clearInterval(time)
+//       selectColoumn()
+//   } else {
+//       displayText();
+//   }
+
+// }
 
 
-let rowElements = [
-  firstRow,
-//   secondRow,
-//   thirdRow,
-//   fourthRow,
-//   fifthRow,
-//   sixthRow,
-];
+let interval = 2000;
+let clear;
 
-let interval = 24000;
-  let increment = 0;
+function rowNav() {
+  time = setInterval(() => {
+    let currentVble, nextVble;
+    if(rows[index++ % rows.length].classList.contains('.rowcolor')) {
+      console.log('no');
 
-function selectRow() {
-  rowElements.forEach((res) => {
-    let runner = setTimeout(() => {
-      addClass(res);
-      clearTimeout(runner);
-    }, interval * increment);
-
-    increment = increment + 1;
-  });
-
+      rows[index++ % rows.length].classList.remove('rowcolor');
+    } else {
+      rows[index++ % rows.length].classList.add('rowcolor');
+      console.log('yes');
+    }
+  }, interval);  
 }
 
-function addClass(el) {
-  el.forEach((data) => {
-    data.classList.add("row1");
-    // addSingleClass(el);
-    setTimeout(() => {
-      data.classList.remove("row1");
-    }, interval);
-  });
-}
+// rowNav()
 
 
 
-function addSingleClass() {
-  const time = 2000;
-  let incr = 1;
-  firstRow.forEach( (res, index) => {
-    let runner = setTimeout(() => {
-      res.classList.add("single");
-      clearTimeout(runner);
-      setTimeout(() => {
-        res.classList.remove("single");
-      }, time);
-    }, time * incr);
 
-    incr = incr + 1;
-    // console.log(res)
-  });
-}
+// function selectColoumn() {
+//   console.log('not written')
+// }
 
 
-
-// rowElements.forEach((data,index) => {
-//     console.log(data[index].classList)
-// })
-
+// function displayText() {
+//     console.log('not written')
+// }
    

@@ -56,7 +56,17 @@ function selectColoumn() {
 
 // Display text
 function displayText() {
-  rows[previousIndex].children[previousIndexCol].classList.contains("single");
-  output.value += rows[previousIndex].children[previousIndexCol].textContent;
-  console.log(previousIndexCol);
+  if(rows[previousIndex].children[previousIndexCol].classList.contains("single")) {
+    output.value += rows[previousIndex].children[previousIndexCol].textContent;
+
+  } else if (rows[previousIndex].firstElementChild[previousIndexCol].classList.contains("single return")) {
+    console.log('dhfgdhg')
+  } else {
+    console.log('not found')
+  }
+  
+  
+
 }
+
+

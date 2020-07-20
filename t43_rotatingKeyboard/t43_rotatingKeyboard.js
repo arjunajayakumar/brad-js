@@ -40,6 +40,7 @@ function rowNav() {
     rows[currentIndex].classList.add("rowcolor");
     rows[previousIndex].classList.remove("rowcolor");
     previousIndex = currentIndex;
+    // console.log('row', previousIndex)
     currentIndex = (currentIndex + 1) % 6;
   }, interval);
 }
@@ -54,19 +55,35 @@ function selectColoumn() {
   }, interval);
 }
 
-// Display text
+// Display text & other key functionalities
 function displayText() {
-  if(rows[previousIndex].children[previousIndexCol].classList.contains("single")) {
-    output.value += rows[previousIndex].children[previousIndexCol].textContent;
-
-  } else if (rows[previousIndex].firstElementChild[previousIndexCol].classList.contains("single return")) {
-    console.log('dhfgdhg')
-  } else {
-    console.log('not found')
+  if (rows[previousIndex].children[previousIndexCol].matches(".single.char")) {
+    output.value += rows[previousIndex].children[previousIndexCol].innerText;
+  } else if (
+    rows[previousIndex].children[previousIndexCol].matches(".single.upward")
+  ) {
+    console.log("up arrow");
+  } else if (
+    rows[previousIndex].children[previousIndexCol].matches(".single.downward")
+  ) {
+    rows[previousIndex].children[previousIndexCol].classList.remove("single");
+    rows[previousIndex].classList.remove("rowcolor");
+    clearInterval(time);
+    state = "initial";
+    navigation();
+  } else if (
+    rows[previousIndex].children[previousIndexCol].matches(".single.space")
+  ) {
+    output.value += " ";
+  } else if (
+    rows[previousIndex].children[previousIndexCol].matches(".single.return")
+  ) {
+    output.value = `${output.value} \n`;
+  } else if (
+    rows[previousIndex].children[previousIndexCol].matches(".single.backspace")
+  ) {
+    output.value = output.value.substring(0, output.value.length - 1);
   }
-  
-  
-
 }
 
 

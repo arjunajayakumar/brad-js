@@ -40,7 +40,6 @@ function rowNav() {
     rows[currentIndex].classList.add("rowcolor");
     rows[previousIndex].classList.remove("rowcolor");
     previousIndex = currentIndex;
-    // console.log('row', previousIndex)
     currentIndex = (currentIndex + 1) % 6;
   }, interval);
 }
@@ -82,8 +81,51 @@ function displayText() {
   } else if (
     rows[previousIndex].children[previousIndexCol].matches(".single.backspace")
   ) {
-    output.value = output.value.substring(0, output.value.length - 1);
+    output.value = output.value.substring(0, (output.value.length - 1));
+  } else if (rows[previousIndex].children[previousIndexCol].matches(".single.capsLock")) {
+    toUpperandLower()
   }
 }
 
 
+let status = 'upper';
+function toUpperandLower() {
+  if (status === 'upper') {
+    status = 'lower';
+    toLower()
+  } else {
+    status = 'upper';
+    toUpper()
+  }
+} 
+
+function toLower() {
+  
+  for(let i = 0; i < rows.length; i++) {
+    console.log('hello1');
+    for(j = 0; j < 12; j++){
+      let letter = rows[i].children[j];
+      console.log(letter);
+      if(letter.classList.contains('char')) {
+        let text = letter.textContent.toLowerCase()
+        letter.innerHTML = text;
+      }
+    }
+  }
+}
+
+function toUpper() {
+  
+  for(let i = 0; i < rows.length; i++) {
+    console.log('hello1');
+    for(j = 0; j < 12; j++){
+      let letter = rows[i].children[j];
+      console.log(letter);
+      if(letter.classList.contains('char')) {
+        let text = letter.textContent.toUpperCase()
+        letter.innerHTML = text;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,10 @@
+.drink{
+    color: brown;
+    font-size: 17px;
+    border-bottom: 5px solid brown;
+}
+
+p {
+    font-family: sans-serif;
+    color: blue
+}

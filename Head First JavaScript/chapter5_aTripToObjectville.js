@@ -247,20 +247,81 @@
 
 // };
 
-var eightBall = {
-    index: 0,
-    advice: ["yes", "no", "maybe", "not a chance"],
-    shake: function () {
-        this.index = this.index + 1;
-        console.log(this.index)
-        if (this.index >= this.advice.length) {
-            console.log(this.index)
-            this.index = 0;
-        }
-    },
-    look: function () {
-        return this.advice[this.index];
-    }
-};
-eightBall.shake();
+// var eightBall = {
+//     index: 0,
+//     advice: ["yes", "no", "maybe", "not a chance"],
+//     shake: function () {
+//         this.index = this.index + 1;
+//         if (this.index >= this.advice.length) {
+//             this.index = 0;
+//         }
+//     },
+//     look: function () {
+//         return this.advice[this.index];
+//     }
+// };
+// eightBall.shake();
 // console.log(eightBall.look());
+// eightBall.shake();
+// console.log(eightBall.look());
+// eightBall.shake();
+// console.log(eightBall.look());
+// eightBall.shake();
+
+// let cadi = {
+//     make: "GM",
+//     model: "Cadillac",
+//     year: 1955,
+//     color: "tan",
+//     passengers: 5,
+//     convertible: false,
+//     mileage: 12892,
+//     started: false,
+//     fuel:0,
+//     start: function () {
+//         if(this.fuel > 0) {
+//             this.started = true;
+//         } else {
+//             console.log("The car is on empty, fill up before starting!");
+//         }
+        
+//     },
+//     stop: function () {
+//         this.started = false;
+//     },
+//     drive: function () {
+//         if (this.fuel > 0) {
+//             console.log(this.make + " " + this.model + " goes zoom zoom!");
+//             this.fuel = this.fuel - 1;
+//         } else {
+//             console.log("Uh oh, out of fuel");
+//             this.stop()
+//         }
+//     },
+
+    // Add fuel
+//     addFuel:function(amount) {
+//         this.fuel = this.fuel + amount;
+
+
+//     }
+// };
+
+// cadi.start();
+// cadi.drive();
+// cadi.addFuel(2);
+// cadi.start();
+// cadi.drive();
+// cadi.drive();
+// cadi.stop();
+
+// for (let prop in cadi) {
+//     console.log(prop + ": " + cadi[prop]);
+// }
+
+
+// Top Secret
+let access = document.getElementById("code9");
+let code = access.innerHTML;
+code = code + " midnight";
+alert(code);

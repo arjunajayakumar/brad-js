@@ -1,7 +1,8 @@
+
 // Dealing with NaN
 let myNum = 0;
 
-if(isNaN(myNum)) {
+if (isNaN(myNum)) {
     myNum = 0;
     console.log(myNum)
 } else {
@@ -9,7 +10,7 @@ if(isNaN(myNum)) {
 }
 
 // it gets even wirder
-let test1 = 0/0;
+let test1 = 0 / 0;
 console.log(test1);
 console.log('Type:', typeof test1);
 
@@ -78,10 +79,10 @@ if (1 == 0) {
 // How to get strict with equality('===')
 
 if (99 === "99") {
-        console.log("A number equals to a string");
-    } else {
-        console.group("No way a number equals a string");
-    }
+    console.log("A number equals to a string");
+} else {
+    console.group("No way a number equals a string");
+}
 
 if (99 === "Vanilla") {
     console.log("A number equals to a string");
@@ -172,7 +173,7 @@ function findParkingLot(car) {
     for (let i = 0; i < lot.length; i++) {
         if (car == lot[i]) {
             return i;
-        } 
+        }
 
     }
 
@@ -186,7 +187,7 @@ console.log(findParkingLot(fiat2));
 // Falsy values
 undefined
 let testThis;
-if(testThis) {
+if (testThis) {
     console.log("true")
 } else {
     console.log("False")
@@ -194,26 +195,26 @@ if(testThis) {
 
 // null
 let element = document.getElementById("elemento");
-if(element) {
+if (element) {
     console.log("true");
 }
 
 // zero
-if(0) {
+if (0) {
     console.log("true")
 } else {
     console.log("false")
 }
 
 // empty string
-if("") {
+if ("") {
     console.log("true")
 } else {
     console.log("false")
 }
 
 // NaN
-if(NaN) {
+if (NaN) {
     console.log("true")
 } else {
     console.log("false")
@@ -221,30 +222,30 @@ if(NaN) {
 
 // 08/08/2020
 // What javascript considers falsy
-if([]) {
+if ([]) {
     console.log("true");
 } else {
-     console.log("false");
-}
-
-// let element = document.getElementById("content");
-if(element) {
-    console.log("true")
-}else{
     console.log("false");
 }
 
-if(1) {
+// let element = document.getElementById("content");
+if (element) {
+    console.log("true")
+} else {
+    console.log("false");
+}
+
+if (1) {
     console.log("true")
 } else {
     console.log("false");
 }
 
 let string = "mercy me"
-if(string) {
+if (string) {
     console.log("true")
 } else {
-     console.log("false");
+    console.log("false");
 }
 
 // Sharpen your pencil
@@ -297,10 +298,10 @@ let kisses = 0;
 
 emot = emot.trim();
 emot = emot.toUpperCase();
-for(let i = 0;i < emot.length; i++){
-    if(emot.charAt(i) === 'X'){
+for (let i = 0; i < emot.length; i++) {
+    if (emot.charAt(i) === 'X') {
         hugs++;
-    }else if(emot.charAt(i) === 'o'){
+    } else if (emot.charAt(i) === 'o') {
         kisses++;
     }
 }
@@ -322,20 +323,41 @@ let data = "name|phone|address";
 let val = data.split("|");
 console.log("Split array is", val);
 
+// Chair Wars
 // In Larry's cube
 
 function validate(phoneNumber) {
-if (phoneNumber.length !== 8) {
-    return false;
+    if (phoneNumber.length !== 8) {
+        return false;
     }
     for (let i = 0; i < phoneNumber.length; i++) {
-    if (i === 3) {
-    if (phoneNumber.charAt(i) !== '-') {
-    return false;
-    }
-    } else if (isNaN(phoneNumber.charAt(i))) {
-    return false;
-    }
+        if (i === 3) {
+            if (phoneNumber.charAt(i) !== '-') {
+                return false;
+            }
+        } else if (isNaN(phoneNumber.charAt(i))) {
+            return false;
+        }
     }
     return true;
 }
+
+console.log(validate("1215-132-1-51-1"));
+
+// In Brad's cube
+function validate(phoneNumber) {
+    if (phoneNumber.length !== 8) {
+        return false;
+    }
+    let first = phoneNumber.substring(0, 3);
+    let second = phoneNumber.substring(4);
+    console.log(first)
+    console.log(second)
+    if (phoneNumber.charAt(3) !== "-" || isNaN(first) || isNaN(second)) {
+        return false;
+    }
+    return true;
+}
+
+validate("121-2211");
+

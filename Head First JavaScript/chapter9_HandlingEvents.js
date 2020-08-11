@@ -12,17 +12,37 @@ window.onload = init;
 // }
 
 // Assigning the click handler to all images on the page
+// function init() {
+//     let images = document.getElementsByTagName("img");
+//     for (let i = 0; i < images.length; i++) {
+//         images[i].onclick = showAnswer;
+//     }
+
+
+// }
+
+// function showAnswer() {
+//     let image = document.getElementById("zero");
+//     image.src = "/img/zero.jpg";
+// }
+
+// Putting the event object to work
+// function showAnswer(eventObj){
+//     let image = eventObj.target;
+//     let name = image.id;
+//     name = name + ".jpg";
+//     image.src = "/img/" + name;
+// }
+
+// The mouse move event
 function init() {
-    let images = document.getElementsByTagName("img");
-    console.log(images)
-    for (let i = 0; i < images.length; i++) {
-        images[i].onclick = showAnswer;
-    }
-
-
+    let map = document.getElementById("map");
+    map.onmousemove = showCords;
 }
 
-function showAnswer() {
-    let image = document.getElementById("zero");
-    image.src = "/img/zero.jpg";
+function showCords(eventObj){
+    let map = document.getElementById("coords");
+    let x = eventObj.screenX;
+    let y = eventObj.screenY;
+    map.innerHTML = "Map coordinates: " + x + ", " + y;
 }

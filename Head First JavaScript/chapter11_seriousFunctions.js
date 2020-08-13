@@ -1,173 +1,237 @@
 // How to use an anonymous funcion
-// window.onload = function() {
-//     console.log("Yeah, that Page loaded!")
-// }
+window.onload = function () {
+    console.log("Yeah, that Page loaded!")
+}
 
 // We need to walk about your verbosity, again
-// setTimeout(function() {console.log("Time to take the cookies out of the oven");
-// },5000);
+setTimeout(function () {
+    console.log("Time to take the cookies out of the oven");
+}, 5000);
 
 // When a function is defined? ite depends...
 
-// let migrating = true;
-// if(migrating) {
-//     quack(4);
-//     fly(4);
-// }
+let migrating = true;
+if (migrating) {
+    quack(4);
+    fly(4);
+}
 
 
-// let fly = function(num){
-//     for(let i = 0;i < num; i++) {
-//         console.log("Flying");
-//     }
-// };
+let fly = function (num) {
+    for (let i = 0; i < num; i++) {
+        console.log("Flying");
+    }
+};
 
-// function quack(num) {
-//     for(let i = 0; i < num; i++) {
-//         console.log("Quack");
-//     }
-// }
+function quack(num) {
+    for (let i = 0; i < num; i++) {
+        console.log("Quack");
+    }
+}
 
 // 13/08/2020
 
 // How to nest functions
-// let migrating = true;
-// let fly = function (num) {
-//     let sound = "Flying";
-//     function wingFlapper() {
-//         console.log(sound);
-//     }
-//     for (let i = 0; i < num; i++) {
-//         wingFlapper();
-//     }
-// };
+let migrating = true;
+let fly = function (num) {
+    let sound = "Flying";
+    function wingFlapper() {
+        console.log(sound);
+    }
+    for (let i = 0; i < num; i++) {
+        wingFlapper();
+    }
+};
 
-// function quack(num) {
-//  let sound = "Quack";
-//  let quacker = function() {
-//      console.log(sound);
-//  };
-//  for(let i = 0;i < num; i++) {
-//      quacker();
-//  }
-// }
+function quack(num) {
+    let sound = "Quack";
+    let quacker = function () {
+        console.log(sound);
+    };
+    for (let i = 0; i < num; i++) {
+        quacker();
+    }
+}
 
-// if(migrating) {
-//     quacker(4);
-//     fly(4);
-// }
+if (migrating) {
+    quacker(4);
+    fly(4);
+}
 
 // A little review of lexical scope
-// let justAVar = "Oh, don't you worry about it, I'm GLOBAL";
-// function whereAreYou() {
-//     let justAVar = "Just an every day LOCAL";
-//     return justAVar;
-// }
+let justAVar = "Oh, don't you worry about it, I'm GLOBAL";
+function whereAreYou() {
+    let justAVar = "Just an every day LOCAL";
+    return justAVar;
+}
 
-// let result = whereAreYou();
-// console.log(result);
+let result = whereAreYou();
+console.log(result);
 
 // Now let's introduce a nested function
-// let justAVar = "Oh, don't you worry about it, I'm a GLOBAL";
-// function whereAreYou() {
-//     let justAVar = "Just an every day LOCAL";
-//     function inner() {
-//         return justAVar;
-//     }
+let justAVar = "Oh, don't you worry about it, I'm a GLOBAL";
+function whereAreYou() {
+    let justAVar = "Just an every day LOCAL";
+    function inner() {
+        return justAVar;
+    }
 
-//     return inner();
-// }
+    return inner();
+}
 
-// let result = whereAreYou();
-// console.log(result);
+let result = whereAreYou();
+console.log(result);
 
 // Where things get interesting with lexical scope
-// let justAVar = "Oh, don't you worry about it, I'm GLOBAL";
-// function whereAreYou() {
-//     let justAVar = "just an every day LOCAL";
+let justAVar = "Oh, don't you worry about it, I'm GLOBAL";
+function whereAreYou() {
+    let justAVar = "just an every day LOCAL";
 
-//     function inner() {
-//         return justAVar;
-//     }
+    function inner() {
+        return justAVar;
+    }
 
-//     return inner;
-// }
+    return inner;
+}
 
-// let innerFunction = whereAreYou();
-// let result = innerFunction();
-// console.log(result);
+let innerFunction = whereAreYou();
+let result = innerFunction();
+console.log(result);
 
 // Using closures to implement a magic counter
-// let count = 0;
-// function counter() {
-//     count = count + 1;
-//     return count;
-// }
+let count = 0;
+function counter() {
+    count = count + 1;
+    return count;
+}
 
-// console.log(counter());
-// console.log(counter());
-// console.log(counter());
-// console.log(counter());
+console.log(counter());
+console.log(counter());
+console.log(counter());
+console.log(counter());
 
 // using closure
 
-// function makeCounter() {
-//     let count = 0;
-//     function counter() {
-//         count = count + 1;
-//         return count;
-//     }
+function makeCounter() {
+    let count = 0;
+    function counter() {
+        count = count + 1;
+        return count;
+    }
 
-//     return counter
-// }
+    return counter
+}
 
-// let doCount = makeCounter();
-// console.log(doCount());
-// console.log(doCount());
-// console.log(doCount());
+let doCount = makeCounter();
+console.log(doCount());
+console.log(doCount());
+console.log(doCount());
 
 // Excercise
-// function makePassword(password) {
-//     return function guess(passwordGuess) {
-//         console.log(passwordGuess);
-//         return(passwordGuess === password);
-//     };
-// }
+function makePassword(password) {
+    return function guess(passwordGuess) {
+        console.log(passwordGuess);
+        return (passwordGuess === password);
+    };
+}
 
-// let tryGuess = makePassword("secret");
-// console.log("guessing 'nope':" + tryGuess("nope"));
-// console.log("guessing 'secret':" + tryGuess("secret"));
+let tryGuess = makePassword("secret");
+console.log("guessing 'nope':" + tryGuess("nope"));
+console.log("guessing 'secret':" + tryGuess("secret"));
 
-// function multN(n) {
-//     return function multiply(s) {
-//         return (n * s);
-//     }
-// }
+function multN(n) {
+    return function multiply(s) {
+        return (n * s);
+    }
+}
 
-// let mulResult = multN(5);
-// console.log("First ;" + mulResult(7));
-// console.log("Second ;" + mulResult(8));
+let mulResult = multN(5);
+console.log("First ;" + mulResult(7));
+console.log("Second ;" + mulResult(8));
 
-// function makeCounter() {
-//     let count = 0;
-//     return {
-//         increment:function() {
-//             count++;
-//             return count;
-//         }
-//     }
-// }
+function makeCounter() {
+    let count = 0;
+    return {
+        increment: function () {
+            count++;
+            return count;
+        }
+    }
+}
 
-// let counter = makeCounter();
-// console.log(counter.increment());
-// console.log(counter.increment());
-// console.log(counter.increment());
+let counter = makeCounter();
+console.log(counter.increment());
+console.log(counter.increment());
+console.log(counter.increment());
 
 // Creating a closure by passing a function expression as an argument
 function maskeTimer(donMessage, n) {
-    setTimeout(function() {
+    setTimeout(function () {
         console.log(donMessage);
     }, n);
 }
 
 maskeTimer("cookies are done!", 1000);
+
+// The closure contains the actual environment, not a copy
+function setTimer(doneMessage, n) {
+    setTimeout(function () {
+        console.log(doneMessage);
+    }, n);
+
+    doneMessage = "OUCH"
+}
+
+setTimer("Cookies are done!", 1000)
+
+// Creating a closure with aevent Handler
+let count = 0;
+
+window.onload = function () {
+    let button = document.getElementById("clickme");
+    button.onclick = handleClick;
+};
+
+function handleClick() {
+    let message = "You clicked me!";
+    let div = document.getElementById("message");
+    count++;
+    div.innerHTML = message + count + " times";
+}
+
+// click me with a closure
+
+
+window.onload = function () {
+
+    let count = 0;
+    let message = "You clicked me ";
+    let div = document.getElementById("message");
+    let button = document.getElementById("clickme");
+    button.onclick = function () {
+        count++;
+
+        div.innerHTML = message + count + " times!";
+
+    }
+
+};
+
+// Sharpen your Pencil
+(function (food) {
+    if (food === "cookies") {
+        console.log("More Please");
+    } else if (food === "cake") {
+        console.log("Yum yum")
+    }
+})("cookies");
+
+let eat = function (food) {
+    if (food === "cookies") {
+        console.log("More Please");
+    } else if (food === "cake") {
+        console.log("Yum yum");
+    }
+};
+
+(eat)("cookies")

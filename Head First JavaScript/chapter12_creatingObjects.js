@@ -82,7 +82,8 @@ for (let i = 0; i < dogs.length; i++) {
     dogs[i].bark();
 }
 
-Exercise
+// Exercise
+
 function Coffee(roast, ounces) {
     this.roast = roast;
     this.ounces = ounces;
@@ -114,6 +115,7 @@ console.log(houseBlend.getSize());
 let darkRoast = new Coffee("Dark Roast", 16);
 console.log(darkRoast.toString());
 
+// 14/08/2020
 // it's production time
 
 function Car(make, model, year, color, pasengers, convertible, mileage) {

@@ -14,15 +14,14 @@ let expRate = 0;
 //Event Listener
 transaction.addEventListener('click', addHistory);
 list.addEventListener('click', deleteItem);
-document.addEventListener('DOMContentLoaded', getItem); 
+document.addEventListener('DOMContentLoaded', getItems);
 
 
 //add Income
 function addIncome(expAmount) {
-
     totalAmount += parseInt(expAmount);
-    income.innerHTML = `$${totalAmount}`;
-    balance.innerHTML = `$${totalAmount}`;
+    income.innerText = `₹${totalAmount}`;
+    balance.innerText = `₹${totalAmount}`;
     text.value = '';
     amount.value = '';
 }
@@ -30,8 +29,8 @@ function addIncome(expAmount) {
 //add Expense
 function addExpense(expAmount) {
     expRate += parseInt(expAmount);
-    expense.innerText = `$${expRate}`;
-    balance.innerHTML = `$${totalAmount + expRate}`;
+    expense.innerText = '₹' + `${expRate}`;
+    balance.innerHTML = '₹' + `${parseInt(totalAmount) + parseInt(expRate)}`;
     text.value = '';
     amount.value = '';
 }
@@ -53,14 +52,14 @@ function addHistory(e) {
         listEl.innerHTML = `${expenseName}`;
         const spanEl = document.createElement('span');
         listEl.appendChild(spanEl);
-        spanEl.innerHTML = `$${expenseAmount}`;
+        spanEl.innerHTML = `₹${expenseAmount}`;
         const buttonEl = document.createElement('button');
         buttonEl.className = 'delete-btn';
         listEl.appendChild(buttonEl);
         buttonEl.innerHTML = 'X';
         list.appendChild(listEl);
         history.style.display = 'block';
-        addExpense(expenseAmount);
+        // addExpense(expenseAmount);
         dataStore(expenseName, expenseAmount);
     } else {
         const listEl = document.createElement('li');
@@ -68,14 +67,14 @@ function addHistory(e) {
         listEl.innerHTML = `${expenseName}`;
         const spanEl = document.createElement('span');
         listEl.appendChild(spanEl);
-        spanEl.innerHTML = `$${expenseAmount}`;
+        spanEl.innerHTML = `₹${expenseAmount}`;
         const buttonEl = document.createElement('button');
         buttonEl.className = 'delete-btn';
         listEl.appendChild(buttonEl);
         buttonEl.innerHTML = 'X';
         list.appendChild(listEl);
         history.style.display = 'block';
-        addIncome(expenseAmount);
+        // addIncome(expenseAmount);
         dataStore(expenseName, expenseAmount);
     }
     e.preventDefault()
@@ -89,10 +88,11 @@ function deleteItem(e) {
 
         if (e.target.parentElement.className === 'plus') {
             removeFromLs(expName);
-            addIncome(-expval);
+            addIncome(-1 * expval);
         } else {
             removeFromLs(expName);
             addExpense(-1 * expval);
+            console.log(expval)
         }
         e.target.parentElement.remove();
     }
@@ -114,7 +114,7 @@ function dataStore(name, money) {
 }
 
 //get from localStorage
-function getItem() {
+function getItems() {
     let getItems;
 
     if (localStorage.getItem('entries') === null) {
@@ -122,10 +122,11 @@ function getItem() {
     } else {
         getItems = JSON.parse(localStorage.getItem('entries'));
     }
-
+  
     //Populate UI
     getItems.forEach(res => {
         if (res.value > 0) {
+            addIncome(res.value);
             const li = document.createElement('li');
             li.className = 'plus';
             li.innerHTML = `${res.inputText}`;
@@ -141,8 +142,6 @@ function getItem() {
             list.appendChild(li);
 
             history.style.display = 'block';
-
-            addIncome(res.value);
 
         } else {
             const li = document.createElement('li');
@@ -165,8 +164,8 @@ function getItem() {
             addExpense(res.value);
         }
     })
-}
 
+}
 
 // Remove from LS
 function removeFromLs(intemName) {

@@ -20,19 +20,20 @@ document.addEventListener('DOMContentLoaded', getItems);
 //add Income
 function addIncome(expAmount) {
     totalAmount += parseInt(expAmount);
-    income.innerText = `₹${totalAmount}`;
-    balance.innerText = `₹${totalAmount}`;
     text.value = '';
     amount.value = '';
+    income.innerText = `₹ ${totalAmount}`;
+    balance.innerText = `₹ ${totalAmount}`;
 }
 
 //add Expense
 function addExpense(expAmount) {
     expRate += parseInt(expAmount);
-    expense.innerText = '₹' + `${expRate}`;
-    balance.innerHTML = '₹' + `${parseInt(totalAmount) + parseInt(expRate)}`;
     text.value = '';
     amount.value = '';
+    expense.innerText = `₹ ${expRate}`;
+    balance.innerHTML = `₹ ${parseInt(totalAmount)}` + `${parseInt(expRate)}`;
+    
 }
 
 let expenseName;
@@ -88,7 +89,7 @@ function deleteItem(e) {
 
         if (e.target.parentElement.className === 'plus') {
             removeFromLs(expName);
-            addIncome(-1 * expval);
+            addIncome(expval);
         } else {
             removeFromLs(expName);
             addExpense(-1 * expval);
@@ -122,7 +123,7 @@ function getItems() {
     } else {
         getItems = JSON.parse(localStorage.getItem('entries'));
     }
-  
+
     //Populate UI
     getItems.forEach(res => {
         if (res.value > 0) {
@@ -144,6 +145,7 @@ function getItems() {
             history.style.display = 'block';
 
         } else {
+            addExpense(res.value);
             const li = document.createElement('li');
             li.className = 'minus';
             li.innerHTML = `${res.inputText}`;
@@ -161,7 +163,6 @@ function getItems() {
 
             history.style.display = 'block';
 
-            addExpense(res.value);
         }
     })
 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="t43_rotatingKeyboard.css">
+    <title>Rotating Keyboard</title>
+</head>
+<body>
+    <div class="container">
+        <textarea name="" class="output" id="output" cols="12" disabled rows="12">
+
+        </textarea>
+
+        <div class="key-container">
+            <div class="keyholder row1">
+                <div class="keys keys1 upward" id="keys"><i class="material-icons">arrow_upward</i></div>
+                <div class="keys keys1 char" id="keys">A</div>
+                <div class="keys keys1 char" id="keys">B</div>
+                <div class="keys keys1 char" id="keys">C</div>
+                <div class="keys keys1 char" id="keys">D</div>
+                <div class="keys keys1 char" id="keys">E</div>
+                <div class="keys keys1 char" id="keys">F</div>
+                <div class="keys keys1 char" id="keys">G</div>
+                <div class="keys keys1 space" id="keys"><i class="material-icons">space_bar</i></div>
+                <div class="keys keys1 backspace" id="keys"><i class="material-icons">backspace</i></div>
+                <div class="keys keys1 return" id="keys"><i class="material-icons">keyboard_return</i></div>
+                <div class="keys keys1 downward" id="keys"><i class="material-icons">arrow_downward</i></div>   
+            </div>
+
+            <div class="keyholder row2">
+                <div class="keys keys2 upward" id="keys2"><i class="material-icons">arrow_upward</i></div>
+                <div class="keys keys2 char" id="keys2">H</div>
+                <div class="keys keys2 char" id="keys2">I</div>
+                <div class="keys keys2 char" id="keys2">J</div>
+                <div class="keys keys2 char" id="keys2">K</div>
+                <div class="keys keys2 char" id="keys2">L</div>
+                <div class="keys keys2 char" id="keys2">M</div>
+                <div class="keys keys2 char" id="keys2">N</div>
+                <div class="keys keys2 space" id="keys2"><i class="material-icons">space_bar</i></div>
+                <div class="keys keys2 backspace" id="keys2"><i class="material-icons">backspace</i></div>
+                <div class="keys keys2 return" id="keys2"><i class="material-icons">keyboard_return</i></div>
+                <div class="keys keys2 downward" id="keys2"><i class="material-icons">arrow_downward</i></div>   
+            </div>
+
+            <div class="keyholder row3">
+                <div class="keys keys3 upward" id="keys3"><i class="material-icons">arrow_upward</i></div>
+                <div class="keys keys3 char" id="keys3">O</div>
+                <div class="keys keys3 char" id="keys3">P</div>
+                <div class="keys keys3 char" id="keys3">Q</div>
+                <div class="keys keys3 char" id="keys3">R</div>
+                <div class="keys keys3 char" id="keys3">S</div>
+                <div class="keys keys3 char" id="keys3">T</div>
+                <div class="keys keys3 char" id="keys3">U</div>
+                <div class="keys keys3 space" id="keys3"><i class="material-icons">space_bar</i></div>
+                <div class="keys keys3 backspace" id="keys3"><i class="material-icons">backspace</i></div>
+                <div class="keys keys3 return" id="keys3"><i class="material-icons">keyboard_return</i></div>
+                <div class="keys keys3 downward" id="keys3"><i class="material-icons">arrow_downward</i></div>   
+            </div>
+
+            <div class="keyholder row4">
+                <div class="keys keys4 upward" id="keys4"><i class="material-icons">arrow_upward</i></div>
+                <div class="keys keys4 char" id="keys4">V</div>
+                <div class="keys keys4 char" id="keys4">W</div>
+                <div class="keys keys4 char" id="keys4">X</div>
+                <div class="keys keys4 char" id="keys4">Y</div>
+                <div class="keys keys4 char" id="keys4">Z</div>
+                <div class="keys keys4 char" id="keys4">.</div>
+                <div class="keys keys4 char" id="keys4">,</div>
+                <div class="keys keys4 space" id="keys4"><i class="material-icons">space_bar</i></div>
+                <div class="keys keys4 backspace" id="keys4"><i class="material-icons">backspace</i></div>
+                <div class="keys keys4 return" id="keys4"><i class="material-icons">keyboard_return</i></div>
+                <div class="keys keys4 downward" id="keys4"><i class="material-icons">arrow_downward</i></div>   
+            </div>
+
+            <div class="keyholder row5">
+                <div class="keys keys5 upward" id="keys5"><i class="material-icons">arrow_upward</i></div>
+                <div class="keys keys5 char" id="keys5">1</div>
+                <div class="keys keys5 char" id="keys5">2</div>
+                <div class="keys keys5 char" id="keys5">3</div>
+                <div class="keys keys5 char" id="keys5">4</div>
+                <div class="keys keys5 char" id="keys5">5</div>
+                <div class="keys keys5 char" id="keys5">6</div>
+                <div class="keys keys5 char" id="keys5">7</div>
+                <div class="keys keys5 space" id="keys5"><i class="material-icons">space_bar</i></div>
+                <div class="keys keys5 backspace" id="keys5"><i class="material-icons">backspace</i></div>
+                <div class="keys keys5 return" id="keys5"><i class="material-icons">keyboard_return</i></div>
+                <div class="keys keys5 downward" id="keys5"><i class="material-icons">arrow_downward</i></div>   
+            </div>
+
+            <div class="keyholder row6">
+                <div class="keys keys6 upward" id="keys"><i class="material-icons">arrow_upward</i></div>
+                <div class="keys keys6 char" id="keys6">8</div>
+                <div class="keys keys6 char" id="keys6">9</div>
+                <div class="keys keys6 char" id="keys6">0</div>
+                <div class="keys keys6 char" id="keys6">@</div>
+                <div class="keys keys6 capsLock" id="keys6"><i class="material-icons">keyboard_capslock</i></div>
+                <div class="keys keys6 char" id="keys6">_</div>
+                <div class="keys keys6 char" id="keys6">?</div>
+                <div class="keys keys6 space" id="keys6"><i class="material-icons">space_bar</i></div>
+                <div class="keys keys6 backspace" id="keys6"><i class="material-icons">backspace</i></div>
+                <div class="keys keys6 return" id="keys6"><i class="material-icons">keyboard_return</i></div>
+                <div class="keys keys6 downward" id="keys6"><i class="material-icons">arrow_downward</i></div>   
+            </div>
+        </div> 
+        <div class="input" id="input">Tap</div> 
+    </div>    
+<script src="t43_rotatingKeyboard.js"></script>
+</body>
+</html>

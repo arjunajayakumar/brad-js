@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #bdbdbd;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    min-height: 150vh;
+}
+
+.output {
+    width: 650px;
+    height: 250px;
+    margin: 0 0 20px 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border: 0;
+    font-size: 20px;
+    color: #000;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.keyholder {
+    display: flex;
+    background-color: #bdbdbd;
+}
+
+.keys {
+    width: 50px;
+    height: 50px;
+    padding: 10px 2px;
+    margin: 5px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: aliceblue;
+    font-weight: 500px;
+}
+
+.input {
+    display: flex;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 0 0;
+    width: 150px;
+    height: 75px;
+    border: 1px solid #bdbdbd;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.rowcolor {
+    background-color: #2196f3;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px; 
+}
+
+.single {
+    border: 1px solid #0277bd;
+    background-color: red;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.capsLock {
+    background-color: #81c784;
+}
